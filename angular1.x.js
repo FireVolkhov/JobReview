@@ -1,4 +1,6 @@
-function angular1xCtrl() {
+// AngularJs 1.x
+
+function someCtrl() {
 	var self = this;
 
 	self.counter = 0;
@@ -9,7 +11,7 @@ function angular1xCtrl() {
 		setTimeout(function () {
 			self.counter = 2;
 			console.log(self.counter);
-		}, 100);
+		}, 2000);
 	}
 }
 
