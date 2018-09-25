@@ -11,9 +11,13 @@ const AutocompleteComponent = {
 	},
 	template: `
 		<div>
-			<div ng-repeat="item in autocompleteComponentCtrl.list"></div>
+			<div ng-repeat="item in autocompleteComponentCtrl.list">
+				<div>{{ item.Name }}</div>
+			</div>
+			
 			<div>{{:: autocompleteComponentCtrl.id }}</div>
 			<div>{{:: autocompleteComponentCtrl.resizeCounter }}</div>
+			
 			<div ng-if="autocompleteComponentCtrl.isLoading"><loader></loader></div>
 		<div>`,
 

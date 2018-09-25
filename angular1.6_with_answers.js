@@ -11,11 +11,15 @@ const AutocompleteComponent = {
 	},
 	template: `
 		<div>
-			<div ng-repeat="item in autocompleteComponentCtrl.list"></div>
+			<div ng-repeat="item in autocompleteComponentCtrl.list">
+				<div>{{ item.Name }}</div>
+			</div>
+			
 			<div>{{:: autocompleteComponentCtrl.id }}</div>
-			<div>{{:: autocompleteComponentCtrl.resizeCounter }}</div><--! 9 Одноразовый биндинг для изменяемой перемменой -->
+			<div>{{:: autocompleteComponentCtrl.resizeCounter }}</div>
+			
 			<div ng-if="autocompleteComponentCtrl.isLoading"><loader></loader></div>
-		<div>`,
+		<div>`, // 11 Нет закрывающего тега
 
 	controller: function ($scope, $element, _, AutocompleteServiceFactory) { // 2 должен быть inject
 		switch (this.srcType) {
@@ -40,7 +44,7 @@ const AutocompleteComponent = {
 
 		this.resize = function() { // 4 либо стрелочная функция
 			this.resizeCounter++; // 4 либо self тут
-		};
+		}; // 10 ОБъяевлена позже использования
 
 		this.isLoading = false;
 
