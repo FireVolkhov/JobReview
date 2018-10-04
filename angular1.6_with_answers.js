@@ -19,6 +19,7 @@ const AutocompleteComponent = {
 			<div>{{:: autocompleteComponentCtrl.resizeCounter }}</div>
 			
 			<div ng-if="autocompleteComponentCtrl.isLoading"><loader></loader></div>
+			<button ng-click="clickInButton()"></button> // 13 не указан контроллер
 		<div>`, // 11 Нет закрывающего тега
 
 	controller: function ($scope, $element, _, AutocompleteServiceFactory) { // 2 должен быть inject
@@ -44,7 +45,7 @@ const AutocompleteComponent = {
 
 		this.resize = function() { // 4 либо стрелочная функция
 			this.resizeCounter++; // 4 либо self тут
-		}; // 10 ОБъяевлена позже использования
+		}; // 10 Объяевлена позже использования
 
 		this.isLoading = false;
 
@@ -63,4 +64,5 @@ const AutocompleteComponent = {
 	}
 };
 
-angular.component('AutocompleteComponent', AutocompleteComponent); // 6 С заглавной буквы ошибка
+// 14 Не указан module
+angular.component('AutocompleteComponent', AutocompleteComponent); // 12 С заглавной буквы ошибка

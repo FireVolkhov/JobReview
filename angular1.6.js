@@ -1,5 +1,8 @@
+// https://jsfiddle.net/gf57dztc/
 // Джунеор отправил код на ревью, оцените его,
 // напишите замечания, если необходимо
+// _ - библиотека lodash
+// AutocompleteServiceFactory
 
 // AngularJs 1.6
 const AutocompleteComponent = {
@@ -19,6 +22,7 @@ const AutocompleteComponent = {
 			<div>{{:: autocompleteComponentCtrl.resizeCounter }}</div>
 			
 			<div ng-if="autocompleteComponentCtrl.isLoading"><loader></loader></div>
+			<button ng-click="clickInButton()"></button>
 		<div>`,
 
 	controller: function ($scope, $element, _, AutocompleteServiceFactory) {
