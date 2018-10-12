@@ -31,13 +31,16 @@ const AutocompleteComponent = {
 				if (this.apiUrl) {
 					this.autocompleteService = AutocompleteServiceFactory(this.apiUrl);
 				}
-
+				// нет брейка
 			case 'list':
 				this.list = parseList(this.srcList);
 				break;
+				// нет дефолта
 		}
 
 		this.id = _.uniqueId('autocomplete_');
+
+
 		this.resizeCounter = 0;
 
 		window.addEventListener('resize', this.resize);
@@ -45,6 +48,7 @@ const AutocompleteComponent = {
 		this.resize = function() {
 			this.resizeCounter++;
 		};
+
 
 		this.isLoading = false;
 
